@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="prueba">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  Hola mundo
+  {{ 2 + 2 }}
+  <div ng-controller="ControllerPrincipal" ng-init="contador = 0">
+    <input type="text" ng-model="cajaTexto" />
+    <table>
+      <tr ng-repeat="dominio in lista | filter: cajaTexto">
+        <td>{{ dominio.name }}</td>
+        <td>{{ dominio.periodo }}</td>
+      </tr>
+    </table>
+    {{ contador }}
+    <button ng-click="aumentar()">Aumentar</button>
+  </div>
+</body>
+</html>
